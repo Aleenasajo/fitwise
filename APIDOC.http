@@ -1,0 +1,61 @@
+#api call for creating admin
+###
+POST  http://127.0.0.1:8000/owner/register/
+Content-Type: application/json
+
+{
+    "username":"aleena",
+    "email":"aleena@gmail.com",
+    "password":"aleena@123"
+}
+
+
+
+
+#api call for listing all assesments
+###
+GET http://127.0.0.1:8000/foodinfo/foodlog/
+Accept: application/json
+Authorization: Basic aleena:aleena@123
+
+
+#api call for listing
+###
+GET http://127.0.0.1:8000/foodinfo/foodlog/
+Accept: application/json
+
+#api call for posing
+###
+POST  http://127.0.0.1:8000/foodinfo/foodlog/
+Content-Type: application/json
+
+{
+    "title":"Grilled Salmon",
+    "calorie":520,
+    "meal_type":"dinner",
+    "serving_size":"250 grams",
+    "owner":"aleena"
+}
+
+#api call for retrieving a record
+###
+GET  http://127.0.0.1:8000/foodinfo/foodlog/1/
+Accept: application/json
+
+#api call for updating record
+###
+PUT  http://127.0.0.1:8000/foodinfo/foodlog/2/
+Content-Type: application/json
+
+{
+    "title":"Grilled Salmon",
+    "calorie":520,
+    "meal_type":"dinner",
+    "serving_size":"250 grams",
+    "owner":"anu"
+}
+
+#api call for deleting record
+###
+DELETE  http://127.0.0.1:8000/foodinfo/foodlog/2/
+Accept: application/json
